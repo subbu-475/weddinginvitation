@@ -35,7 +35,7 @@ window.onload = function() {
 };
 
 
-var countDownDate = new Date("June 14, 2024 00:00:00").getTime();
+var countDownDate = new Date("June 16, 2024 18:00:00").getTime();
 
 var x = setInterval(function () {
   var now = new Date().getTime();

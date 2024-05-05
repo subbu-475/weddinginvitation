@@ -2,13 +2,36 @@ body {
   font-family: Arial, Helvetica, Sans-serif;
   background: linear-gradient(white,
       #f7f06d,
-      #edbf61,
+      white,
       #fcec56);
 }
 
 img {
   max-width: 100%;
   height: auto;
+}
+
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 5px #70f6ff; /* Initial shadow */
+  }
+  50% {
+    box-shadow: 0 0 20px #70f6ff; /* Glowing shadow */
+  }
+  100% {
+    box-shadow: 0 0 5px #70f6ff; /* Return to initial shadow */
+  }
+}
+
+.glow-span {
+  margin-bottom: 30px;
+  background-color: #05aab5;
+  font-size: large;
+  color: #fff;
+  font-weight: 600;
+  padding: 1% 2%;
+  border-radius: 30px;
+  animation: glow 1.5s infinite; /* Apply the animation */
 }
 
 @media (max-width: 900px) {
@@ -247,6 +270,44 @@ a {
  
 }
 
+.img-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  
+}
+
+.image-pair {
+  width: 250px; /* Adjust this value as needed */
+  height: 250px; /* Adjust this value as needed */
+  overflow: hidden;
+  border-radius: 50%;
+  position: relative;
+}
+
+.image-pair img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 50%; /* Ensure the image is circular */
+  animation: glow 1s infinite ; /
+}
+
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 10px rgba(0, 0, 255, 0.5); /* Adjust size and color as needed */
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(0, 0, 255, 0.9); /* Adjust size and color as needed */
+  }
+  100% {
+    box-shadow: 0 0 10px rgba(0, 0, 255, 0.5); /* Adjust size and color as needed */
+  }
+}
+
+
+
 .music-icon {
   font-size: 40px; /* Adjust the size of the icon as needed */
   cursor: pointer; /* Change cursor to pointer when hovered over */
@@ -289,6 +350,15 @@ a {
     /* display: grid; */
     font-size: 16px;
   }
+
+  .img-container{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .title h1 {
+    font-size: 30px;
+  }
 }
 
 @media only screen and (max-width: 400px) {
@@ -296,6 +366,23 @@ a {
     overflow: hidden;
     position: relative;
     width: 100%;
+  }
+
+  .img-container{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .title h1 {
+    font-size: 30px;
+  }
+
+  .image-pair {
+    width: 200px; /* Adjust this value as needed */
+    height: 200px; /* Adjust this value as needed */
+    overflow: hidden;
+    border-radius: 50%;
+    position: relative;
   }
 
   .video-container::after {
