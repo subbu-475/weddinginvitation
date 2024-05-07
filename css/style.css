@@ -486,6 +486,7 @@ a {
   text-align: center;
   height: auto;
   object-fit: cover;
+  margin-top: 1rem;
 }
 
 blockquote {
