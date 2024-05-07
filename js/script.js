@@ -27,10 +27,19 @@
 window.onload = function() {
   var audio = document.getElementById("my_audio");
   var musicIcon = document.getElementById("musicIcon");
+  var stopIcon = document.getElementById("stop");
 
   musicIcon.addEventListener("click", function() {
     audio.play();
-    musicIcon.style.display = "none"; // Hide the music icon after it's clicked
+    musicIcon.style.display = "none";
+    stopIcon.style.display = "block"; // Hide the music icon after it's clicked
+  });
+
+  stopIcon.addEventListener("click", function() {
+    audio.pause(); // Pause the audio instead of stop() as there's no stop() method in HTMLAudioElement
+    audio.currentTime = 0; // Reset the audio to the beginning
+    stopIcon.style.display = "none";
+    musicIcon.style.display = "block"; // Show the music icon again
   });
 };
 
