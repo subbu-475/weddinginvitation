@@ -296,7 +296,7 @@ a {
   overflow: hidden;
   border-radius: 50%;
   /* position: relative; */
-  border: 10px solid #F3CA52;
+  /* border: 10px solid #F3CA52; */
 }
 
 .image-pair img {
