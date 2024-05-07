@@ -1,7 +1,8 @@
 body {
   font-family: Arial, Helvetica, Sans-serif;
   background: linear-gradient(rgb(10, 104, 71),
-      rgb(10, 150, 71),
+      rgb(10, 170, 71),
+      rgb(10, 104, 71),
       rgb(10, 150, 71),
       rgb(10, 104, 71) )
   }
